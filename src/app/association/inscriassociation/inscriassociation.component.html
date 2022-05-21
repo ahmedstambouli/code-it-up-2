@@ -1,0 +1,112 @@
+<div class="container">
+    
+
+    <div class="row"> 
+  <mat-stepper  #stepper>
+   
+        <div class="col-md-4">
+            <img src="../../assets/image/multi-ethnic-group-of-young-people-studying-together-on-white.jpg" alt="">
+        </div>
+        <div class="col-md-4">
+            <mat-step [stepControl]="firstFormGroup">
+                <form [formGroup]="firstFormGroup">
+                  <!-- <ng-template matStepLabel>Fill out your name</ng-template> -->
+                    <div class="row">
+                        <div class="col-md-6">
+                          <mat-form-field appearance="fill">
+                              <mat-label>Name</mat-label>
+                              <input matInput type="text" placeholder="Name"  formControlName="firstCtrl" required>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                          <mat-form-field appearance="fill">
+                              <mat-label>Enter your email</mat-label>
+                              <input matInput type="email" placeholder="pat@example.com" formControlName="email" required>
+                              <mat-error></mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Location</mat-label>
+                            <input matInput  type="text" placeholder="Location" formControlName="Location" required>
+                          </mat-form-field>
+                      </div>
+                      <div class="col-md-6">
+                          <mat-form-field class="example-full-width" appearance="fill">
+                              <mat-label>Telephone</mat-label>
+                              <input type="tel" matInput placeholder="555-555-1234" formControlName="phoneN" >
+                              <mat-icon matSuffix>mode_edit</mat-icon>
+                            </mat-form-field>
+                      </div>
+                  </div>
+          
+                  <div class="row">
+                      <div class="col-md-6">
+                        <mat-form-field appearance="fill">
+                            <mat-label>date creation</mat-label>
+                            <input matInput  type="date" placeholder="date creation" formControlName="dateC" required>
+                          </mat-form-field>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="input-group mb-3">
+                              <input type="file" class="form-control" id="inputGroupFile01" formControlName="Logo">
+                            </div>
+                      </div>
+                  </div>
+          
+                  <div class="row">
+                      <div class="col-md-6">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Password</mat-label>
+                            <input matInput  type="password" placeholder="Password" formControlName="Password" required>
+                          </mat-form-field>
+                      </div>
+                      <div class="col-md-6">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Confirm Password</mat-label>
+                            <input matInput type="password" placeholder="Confirm Password" formControlName="phonenumber" required>
+                          </mat-form-field>
+                      </div>
+                  </div>
+                 <div class="row">
+                  <mat-form-field appearance="fill">
+                      <mat-label>Description</mat-label>
+                      <input matInput type="text"  placeholder="Description"  formControlName="Description" required>
+                    </mat-form-field>
+                 </div>
+                 
+                  <div>
+                    <button  type="button" class="btn btn-secondary" matStepperNext>Next</button>
+                  </div>
+                </form>
+              </mat-step>
+        
+    
+    <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
+      <form [formGroup]="secondFormGroup">
+        <mat-form-field appearance="fill">
+          <mat-label>Address</mat-label>
+          <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                 required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+</div>
+  </mat-stepper>
+</div>
+
+</div>
