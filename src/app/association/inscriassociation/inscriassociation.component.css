@@ -1,12 +1,29 @@
-.mat-stepper-horizontal {
-    margin-top: 8px;
-  }
+
   
-  .mat-form-field {
-    margin-top: 16px;
-  }
+  
 
   ::ng-deep .mat-step-header .mat-step-icon-selected {
     background-color: #21d4fd; 
  }
+.email{
+    margin-left: 1%
+}
+
+
+.btn-secondary{
+    margin-top: 5%;
+    background-color: #8A5082;
+    box-shadow: #8A5082;
+    border: #8A5082;
+}
+
+
+.btn-secondary:focus{
+    box-shadow: #8A5082;
+    border: 1px solid #8A5082;
+        -webkit-box-shadow: 0px 0px 5px #8A5082;
+        -moz-box-shadow: 0px 0px 5px #8A5082;
+        box-shadow: 0px 0px 5px #8A5082;
+}
+
  
