@@ -36,8 +36,16 @@ export class InscriassociationComponent implements OnInit {
       Location: ['', Validators.required],
       Password: ['', Validators.required],
     });
- 
+ this.addAssociation()
   }
+
+  user:{};
+  addAssociation(){
+   
+    this.user=[this.secondFormGroup.value,this.firstFormGroup.value]
+    console.log(this.user)
+  }
+  
  
   }
 

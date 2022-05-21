@@ -3,7 +3,7 @@
 
     <div class="row">
         <div class="col-md-4" >
-            <img src="../../assets/image/team-sport-hands-up-cheerful-smiling-happy-exercise-together-lifestyle-friends-love-relationship-unity-people-fan-hands-winners.jpg" style="height: 650px; width: 250px;" alt="">
+            <img src="../../assets/image/team-sport-hands-up-cheerful-smiling-happy-exercise-together-lifestyle-friends-love-relationship-unity-people-fan-hands-winners.jpg" style="height: 650px; width:350px;" alt="">
 
         </div> 
         <div class="col-md-7" style="margin-left:-5% ; margin-top: 3%; " >
@@ -65,6 +65,7 @@
                           <mat-form-field appearance="fill">
                               <mat-label>Password</mat-label>
                               <input matInput type="text" placeholder="Password"  formControlName="Password" required>
+                              <mat-error  ></mat-error>
                             </mat-form-field>
                         </div>
                         <div class="col-md-6">
@@ -85,10 +86,11 @@
                       </div>
                       <div class="row">
                           <div class="col-md-6">
-                            <button  type="button" class="btn btn-secondary" matStepperNext >Next</button>
+                            <button  type="button" class="btn btn-secondary" matStepperNext (click)="addAssociation()" >Next</button>
                           </div>
                           
                       </div>
+                      <br>
                       <div class="row">
                             <h3>Alerady have an account? <a routerLink="/Login">Login</a></h3>
                       </div>
@@ -174,7 +176,7 @@
                  
                   <div class="row">
                       <div class="col-md-6">
-                        <button  type="button" class="btn btn-secondary" matStepperNext >Next</button>
+                        <button  type="button" class="btn btn-secondary" matStepperNext (click)="addAssociation()">Next</button>
                       </div>
                       <div class="col-md-6">
                         <button type="button" class="btn btn-secondary" matStepperPrevious>Back</button>
