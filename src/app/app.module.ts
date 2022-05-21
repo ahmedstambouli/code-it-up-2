@@ -15,7 +15,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { DashboaredComponent } from './dashboared/dashboared.component';
 import { NavComponent } from './nav/nav.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -45,6 +45,7 @@ const routes: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
+    HttpClientModule,
 
      // Material
      MatStepperModule,
