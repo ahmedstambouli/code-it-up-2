@@ -9,18 +9,31 @@ import {MatFormFieldModule} from '@angular/material/form-field'
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InscriassociationComponent } from './association/inscriassociation/inscriassociation.component';
+import { SaidbarComponent } from './superadmin/saidbar/saidbar.component';
+import { HomesuperadminComponent } from './superadmin/homesuperadmin/homesuperadmin.component';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
 const routes: Routes = [
   { path: 'Login', component: LoginComponent },
-  { path: 'Inscri', component: InscriassociationComponent }
+  { path: 'Inscri', component: InscriassociationComponent },
+
+//super admin
+{path:'superadmin',component:HomesuperadminComponent,children:[
+
+
+]},
+
+
 ];
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    InscriassociationComponent
+    InscriassociationComponent,
+    SaidbarComponent,
+    HomesuperadminComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +45,8 @@ const routes: Routes = [
      MatInputModule,
      MatFormFieldModule,
      ReactiveFormsModule,
-     FormsModule
+     FormsModule,
+     MatIconModule,
 
   ],
   providers: [],
