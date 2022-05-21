@@ -12,6 +12,8 @@ import { InscriassociationComponent } from './association/inscriassociation/insc
 import { SaidbarComponent } from './superadmin/saidbar/saidbar.component';
 import { HomesuperadminComponent } from './superadmin/homesuperadmin/homesuperadmin.component';
 import { MatIconModule } from '@angular/material/icon';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+
 
 
 
@@ -47,6 +49,7 @@ const routes: Routes = [
      ReactiveFormsModule,
      FormsModule,
      MatIconModule,
+     MatCheckboxModule
 
   ],
   providers: [],

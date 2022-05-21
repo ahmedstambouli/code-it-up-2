@@ -15,9 +15,9 @@ export class InscriassociationComponent implements OnInit {
   constructor(private _formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-    this.firstFormGroup = this._formBuilder.group({
-      firstCtrl: ['', Validators.required],
+    this.secondFormGroup = this._formBuilder.group({
       email: ['', Validators.required, Validators.email],
+      Name: ['', Validators.required],
       Location: ['', Validators.required],
       phonenumber: ['', Validators.required],
       dateC: ['', Validators.required],
@@ -27,8 +27,14 @@ export class InscriassociationComponent implements OnInit {
       Description: ['', Validators.required],
     });
 
-    this.secondFormGroup = this._formBuilder.group({
-      secondCtrl: ['', Validators.required],
+    this.firstFormGroup = this._formBuilder.group({
+      firstname: ['', Validators.required, Validators.email],
+      lastname: ['', Validators.required],
+      phonenumber: ['', Validators.required],
+      email: ['', Validators.required],
+      NCIN: ['', Validators.required],
+      Location: ['', Validators.required],
+      Password: ['', Validators.required],
     });
  
   }
