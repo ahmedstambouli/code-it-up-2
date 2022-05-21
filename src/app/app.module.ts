@@ -12,6 +12,8 @@ import { InscriassociationComponent } from './association/inscriassociation/insc
 import { SaidbarComponent } from './superadmin/saidbar/saidbar.component';
 import { HomesuperadminComponent } from './superadmin/homesuperadmin/homesuperadmin.component';
 import { MatIconModule } from '@angular/material/icon';
+import { DashboaredComponent } from './dashboared/dashboared.component';
+import { NavComponent } from './nav/nav.component';
 
 
 
@@ -21,7 +23,7 @@ const routes: Routes = [
 
 //super admin
 {path:'superadmin',component:HomesuperadminComponent,children:[
-
+  { path: 'Dashboared', component: DashboaredComponent },
 
 ]},
 
@@ -33,7 +35,9 @@ const routes: Routes = [
     LoginComponent,
     InscriassociationComponent,
     SaidbarComponent,
-    HomesuperadminComponent
+    HomesuperadminComponent,
+    DashboaredComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
