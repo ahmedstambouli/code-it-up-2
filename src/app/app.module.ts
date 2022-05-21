@@ -14,6 +14,8 @@ import { HomesuperadminComponent } from './superadmin/homesuperadmin/homesuperad
 import { MatIconModule } from '@angular/material/icon';
 import { DashboaredComponent } from './dashboared/dashboared.component';
 import { NavComponent } from './nav/nav.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+
 
 
 
@@ -51,6 +53,7 @@ const routes: Routes = [
      ReactiveFormsModule,
      FormsModule,
      MatIconModule,
+     MatCheckboxModule
 
   ],
   providers: [],
