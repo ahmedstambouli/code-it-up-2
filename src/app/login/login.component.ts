@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import jwtDecode from 'jwt-decode';
 
 @Component({
   selector: 'app-login',
@@ -8,9 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
   
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,private router: Router) { }
   
   ngOnInit(): void {
+    
     this.login();
     
   }
@@ -21,6 +24,7 @@ export class LoginComponent implements OnInit {
   }
   data: any = {};
   token: any;
+  user2:any
   login(){
     console.log(this.user)
   this.http.post('http://localhost:3000/api/user/login/',this.user,).subscribe(res=>{
@@ -32,13 +36,19 @@ export class LoginComponent implements OnInit {
     headers.append('Authorization', `jwt ${this.token}`);
     localStorage.setItem('token', this.token);
     this.token = localStorage.getItem('token');
+    this.data = jwtDecode(this.token);
+   if(this.data.user.type=='founder'){
+    this.router.navigate(['/homefoundr'])
 
-
-
+   }
+    
 
   })
   
+  
 }
+
+
   }
 
 

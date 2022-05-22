@@ -16,6 +16,8 @@ import { DashboaredComponent } from './dashboared/dashboared.component';
 import { NavComponent } from './nav/nav.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { HttpClientModule } from '@angular/common/http';
+import { HomefounderComponent } from './dashbordfounder/homefounder/homefounder.component';
+import { NavbarfounderComponent } from './dashbordfounder/navbarfounder/navbarfounder.component';
 
 
 
@@ -29,6 +31,11 @@ const routes: Routes = [
 
 ]},
 
+//founder
+{path:'homefoundr',component:HomefounderComponent,children:[
+  
+]}
+
 
 ];
 @NgModule({
@@ -39,7 +46,9 @@ const routes: Routes = [
     SaidbarComponent,
     HomesuperadminComponent,
     DashboaredComponent,
-    NavComponent
+    NavComponent,
+    HomefounderComponent,
+    NavbarfounderComponent
   ],
   imports: [
     BrowserModule,
