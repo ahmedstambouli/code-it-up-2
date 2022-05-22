@@ -1,0 +1,22 @@
+table {
+    width: 100%;
+  }
+  .content {
+
+    margin-left: 150px;
+}
+
+.box{
+    padding: 15px;
+    border-radius: 5px;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 5px #aeaeae;
+    -moz-box-shadow: 0px 0px 5px #aeaeae;
+    box-shadow: 0px 0px 5px #aeaeae;
+}
+.btn2 {
+    color: white;
+    border-radius: 5px;
+    background: rgb(138, 80, 130);
+    background: linear-gradient(90deg, rgba(138, 80, 130, 1) 0%, rgba(232, 183, 212, 1) 100%);
+}

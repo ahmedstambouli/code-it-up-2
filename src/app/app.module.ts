@@ -15,6 +15,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { DashboaredComponent } from './dashboared/dashboared.component';
 import { NavComponent } from './nav/nav.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+
+import { ListeAssociationComponent } from './liste-association/liste-association.component';
+import {MatTableModule} from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { ListeRequestComponent } from './liste-request/liste-request.component';
+import { ProfilAssociationComponent } from './profil-association/profil-association.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import { ProfilAssComponent } from './profil-ass/profil-ass.component';
+
 import { HttpClientModule } from '@angular/common/http';
 import { HomefounderComponent } from './dashbordfounder/homefounder/homefounder.component';
 import { NavbarfounderComponent } from './dashbordfounder/navbarfounder/navbarfounder.component';
@@ -28,6 +37,10 @@ const routes: Routes = [
 //super admin
 {path:'superadmin',component:HomesuperadminComponent,children:[
   { path: 'Dashboared', component: DashboaredComponent },
+  { path: 'listeAssociation', component: ListeAssociationComponent },
+  { path: 'listeRequest', component: ListeRequestComponent },
+  { path: 'ProfilAssociation/:id', component: ProfilAssociationComponent },
+  { path: 'ProfilAss/:id', component: ProfilAssComponent },
 
 ]},
 
@@ -47,8 +60,15 @@ const routes: Routes = [
     HomesuperadminComponent,
     DashboaredComponent,
     NavComponent,
+<<<<<<< HEAD
     HomefounderComponent,
     NavbarfounderComponent
+=======
+    ListeAssociationComponent,
+    ListeRequestComponent,
+    ProfilAssociationComponent,
+    ProfilAssComponent
+>>>>>>> d5603c8c07df6aa66d4b02d783babd215c13b343
   ],
   imports: [
     BrowserModule,
@@ -63,10 +83,14 @@ const routes: Routes = [
      ReactiveFormsModule,
      FormsModule,
      MatIconModule,
-     MatCheckboxModule
+     MatCheckboxModule,
+     MatTableModule,
+     MatPaginatorModule ,
+     MatTabsModule
+     
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,]
 })
 export class AppModule { }
