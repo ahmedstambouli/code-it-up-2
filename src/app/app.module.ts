@@ -15,6 +15,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { DashboaredComponent } from './dashboared/dashboared.component';
 import { NavComponent } from './nav/nav.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+
 import { ListeAssociationComponent } from './liste-association/liste-association.component';
 import {MatTableModule} from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
@@ -22,6 +23,9 @@ import { ListeRequestComponent } from './liste-request/liste-request.component';
 import { ProfilAssociationComponent } from './profil-association/profil-association.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { ProfilAssComponent } from './profil-ass/profil-ass.component';
+
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 const routes: Routes = [
@@ -58,6 +62,7 @@ const routes: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
+    HttpClientModule,
 
      // Material
      MatStepperModule,
