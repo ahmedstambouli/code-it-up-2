@@ -18,7 +18,7 @@
                 <br>
                 <div class="row">
                     <div class="col" style="text-align: center;">
-                        Name
+                        {{members.members.name}}
                     </div>
                 </div>
             </div>
@@ -26,20 +26,26 @@
                 <mat-tab-group>
                     <mat-tab label="Events">
                         <br>
-                        <button class="btn btn-primary" style="float:right;">Add Event</button>
+                        <button class="btn btn-primary" style="float:right;" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Add Event</button>
                         <br>
                         <br>
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
+                        <div class="row">
+                            <div class="col" *ngFor="let event of events.event">
+                                <div class="card" style="width: 18rem;" >
+                                    <img src="http://localhost:3000/assets/events/{{event.file}}"class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5>{{event.title}}</h5>
+                                        <p>{{event.description}}</p>
+                                        <p>{{event.date}}</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </mat-tab>
                     <mat-tab label="Articals">
                         <br>
-                        <button class="btn btn-primary" style="float:right;">Add Artical</button>
+                        <button class="btn btn-primary" style="float:right;" >Add Artical</button>
                         <br>
                         <br>
                         <div class="card" style="width: 18rem;">
@@ -55,17 +61,63 @@
                         <button class="btn btn-primary" style="float:right;">Add Member</button>
                         <br>
                         <br>
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <div class="row">
+                            <div class="col"  *ngFor="let m of m1">
+                                <div class="card" style="width: 17rem;">
+                                    <img src="..." class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h3 class="card-title">{{m.member.firstName}} {{m.member.lastName}}</h3>
+                                        <p class="card-text"></p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </mat-tab>
                 </mat-tab-group>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="form">
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" name="" id="" class="form-control" placeholder="Title" formControlName="title">
+                        </div>
+                        <div class="col">
+                            <input type="Date" name="" id="" class="form-control" placeholder="Date" formControlName="date">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <!-- <input type="file" name="" id="" formControlName="file"> -->
+                        <input type="file" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])"
+                        (change)="onFilePicked($event)">
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="Description" formControlName="description"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" (click)="addEvent()">add event</button>
             </div>
         </div>
     </div>
