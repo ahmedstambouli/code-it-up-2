@@ -1,14 +1,15 @@
 <app-nav></app-nav>
 
 <div class="container">
-    <div class="content"><br>
-        <br>
-        <button class="btn2"><i class='bx bx-list-ul' ></i></button> &nbsp; <b>Liste Association</b>
+    <div class="content">
         <br>
         <br>
-        <div class="box">
+        <b>Liste Association</b>
+        <br>
+        <br>
+        <div class="box" >
             <h2>Liste association</h2>
-            <table class="table">
+            <table class="table"  >
                 <thead>
                     <tr>
                         <th scope="col">Name</th>
@@ -19,23 +20,22 @@
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
+                <tbody >
+                    <tr *ngFor="let aa of asso">
 
-                        <td scope="col">Name</td>
-                        <td scope="col">Email</td>
-                        <td scope="col">Location</td>
+                        <td scope="col">{{aa.name}}</td>
+                        <td scope="col">{{aa.email}}</td>
+                        <td scope="col"></td>
                         <td scope="col">Phone</td>
-                        <td scope="col">Status</td>
+                        <td scope="col">{{aa.status}}</td>
                         <td scope="col">
-                            <button class="btn btn1" ><i class='bx bx-refresh' style="color: rgb(46, 2, 12)"></i></button>
-                            <button class="btn btn1" ><i class='bx bx-block' style="color: rgb(201, 0, 0)"></i></button>
+                            <button class="btn btn1" ><i class='bx bx-refresh' style="color: rgb(46, 2, 12)" (click)="changetype(aa._id)"></i></button>
+                            <button class="btn btn1" ><i class='bx bx-block' style="color: rgb(201, 0, 0)" (click)="changetype2(aa._id)"></i></button>
                         </td>
                         <td scope="col">
                             <button class="btn btn-primary" style="background-color:#8BBDFF">View</button>
                         </td>
                     </tr>
-                    
                 </tbody>
             </table>
         </div>

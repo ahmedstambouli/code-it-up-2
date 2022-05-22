@@ -32,6 +32,9 @@ import { OwnerArticalComponent } from './owner-artical/owner-artical.component';
 import { OwnerDhashComponent } from './owner-dhash/owner-dhash.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { HomefounderComponent } from './dashbordfounder/homefounder/homefounder.component';
+import { NavbarfounderComponent } from './dashbordfounder/navbarfounder/navbarfounder.component';
+import { InscriuserComponent } from './inscriuser/inscriuser.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
 import { UserAssociationProfilComponent } from './user-association-profil/user-association-profil.component';
 import { EventsComponent } from './events/events.component';
@@ -41,6 +44,7 @@ import { EventsComponent } from './events/events.component';
 const routes: Routes = [
   { path: 'Login', component: LoginComponent },
   { path: 'Inscri', component: InscriassociationComponent },
+  {path:'InscriUser',component:InscriuserComponent},
 
 //super admin
 {path:'superadmin',component:HomesuperadminComponent,children:[
@@ -51,6 +55,12 @@ const routes: Routes = [
   { path: 'ProfilAss/:id', component: ProfilAssComponent },
 
 ]},
+
+//founder
+{path:'homefoundr',component:HomefounderComponent,children:[
+  
+]},
+
 
 {path: 'owner', component: HomeOwnerComponent,children:[
   { path: 'updateEvent/:id', component: UpdateEventComponent },
@@ -76,10 +86,13 @@ const routes: Routes = [
     HomesuperadminComponent,
     DashboaredComponent,
     NavComponent,
+    HomefounderComponent,
+    NavbarfounderComponent,
     ListeAssociationComponent,
     ListeRequestComponent,
     ProfilAssociationComponent,
     ProfilAssComponent,
+    InscriuserComponent,
     UpdateEventComponent,
     UpdateArticalComponent,
     OwnerNavComponent,
