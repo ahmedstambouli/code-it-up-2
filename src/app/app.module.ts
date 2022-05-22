@@ -32,6 +32,9 @@ import { OwnerArticalComponent } from './owner-artical/owner-artical.component';
 import { OwnerDhashComponent } from './owner-dhash/owner-dhash.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { AcceuilComponent } from './acceuil/acceuil.component';
+import { UserAssociationProfilComponent } from './user-association-profil/user-association-profil.component';
+import { EventsComponent } from './events/events.component';
 
 
 
@@ -54,8 +57,13 @@ const routes: Routes = [
   { path: 'updateArtical/:id', component: UpdateArticalComponent },
   { path: 'OwnerArtical', component: OwnerArticalComponent },
   { path: 'OwnerDashowner', component: OwnerDhashComponent },
-]}
+]},
+{ path: 'home', component: AcceuilComponent },
+{ path: 'event/:id', component: EventsComponent },
+{ path: 'ProfilAssComponent/:id', component: UserAssociationProfilComponent },
 ];
+
+
 
 //owner
 
@@ -78,7 +86,10 @@ const routes: Routes = [
     HomeOwnerComponent,
     SideOwnerComponent,
     OwnerArticalComponent,
-    OwnerDhashComponent
+    OwnerDhashComponent,
+    AcceuilComponent,
+    UserAssociationProfilComponent,
+    EventsComponent
   ],
   imports: [
     BrowserModule,

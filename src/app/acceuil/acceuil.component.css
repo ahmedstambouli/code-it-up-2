@@ -1,0 +1,25 @@
+.article{
+    -webkit-box-shadow: 0px 0px 5px #aeaeae;
+    -moz-box-shadow: 0px 0px 5px #aeaeae;
+    box-shadow: 0px 0px 5px #aeaeae;
+    width: 500px;
+    display: block;
+    margin: auto;
+    border-radius:5px;
+    padding: 10px;
+}
+.icon{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+
+}
+.box{
+    padding: 15px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    -webkit-box-shadow: 0px 0px 5px #aeaeae;
+    -moz-box-shadow: 0px 0px 5px #aeaeae;
+    box-shadow: 0px 0px 5px #aeaeae;
+    margin-right: 30px;
+}
