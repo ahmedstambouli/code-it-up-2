@@ -31,7 +31,7 @@ export class ListeRequestComponent implements OnInit {
   }
 
   changetype(id:any){
-    this.http.post('http://localhost:3000/api/admin/updateAssociationStatus/'+id,{'status':'pending'}).subscribe(res=>{
+    this.http.post('http://localhost:3000/api/admin/updateAssociationStatus/'+id,{'status':'accepted'}).subscribe(res=>{
       this.asso=res;
        console.log(this.asso)
          

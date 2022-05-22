@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-liste-association',
@@ -9,9 +9,15 @@ import { Router } from '@angular/router';
 })
 export class ListeAssociationComponent implements OnInit {
 
-  constructor(private http: HttpClient, private router: Router) { }
-
+  constructor(private http: HttpClient, private router: Router,private route: ActivatedRoute) { }
+  id:any
   ngOnInit(): void {
+    this.route.paramMap.subscribe(params => {
+      const id = params.get("id");
+      this.id = id
+      console.log(this.id)
+    });
+    
     this.getAssociation()
   }
 

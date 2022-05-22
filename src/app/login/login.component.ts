@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
     this.token = this.data.token;
     const headers = new Headers();
     headers.append('Authorization', `jwt ${this.token}`);
-    localStorage.setItem('token', this.token);
+    localStorage.setItem('token', 'jwt '+this.token);
     this.token = localStorage.getItem('token');
     this.data = jwtDecode(this.token);
    if(this.data.user.type=='founder'){
