@@ -15,6 +15,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { DashboaredComponent } from './dashboared/dashboared.component';
 import { NavComponent } from './nav/nav.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+
 import { ListeAssociationComponent } from './liste-association/liste-association.component';
 import {MatTableModule} from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
@@ -29,6 +30,9 @@ import { HomeOwnerComponent } from './home-owner/home-owner.component';
 import { SideOwnerComponent } from './side-owner/side-owner.component';
 import { OwnerArticalComponent } from './owner-artical/owner-artical.component';
 import { OwnerDhashComponent } from './owner-dhash/owner-dhash.component';
+
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 const routes: Routes = [
@@ -80,6 +84,7 @@ const routes: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
+    HttpClientModule,
 
      // Material
      MatStepperModule,

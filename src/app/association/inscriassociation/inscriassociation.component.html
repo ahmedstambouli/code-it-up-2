@@ -3,7 +3,7 @@
 
     <div class="row">
         <div class="col-md-4" >
-            <img src="../../assets/image/team-sport-hands-up-cheerful-smiling-happy-exercise-together-lifestyle-friends-love-relationship-unity-people-fan-hands-winners.jpg" style="height: 650px; width: 250px;" alt="">
+            <img src="../../assets/image/team-sport-hands-up-cheerful-smiling-happy-exercise-together-lifestyle-friends-love-relationship-unity-people-fan-hands-winners.jpg" style="height: 650px; width:350px;" alt="">
 
         </div> 
         <div class="col-md-7" style="margin-left:-5% ; margin-top: 3%; " >
@@ -40,7 +40,7 @@
                         <div class="col-md-6">
                             <mat-form-field appearance="fill">
                                 <mat-label>Email</mat-label>
-                                <input matInput  type="text" placeholder="Email" formControlName="email" required>
+                                <input matInput  type="email" placeholder="Email" formControlName="email" required>
                               </mat-form-field>
                         </div>
                     </div>
@@ -55,7 +55,7 @@
                         <div class="col-md-6">
                             <mat-form-field appearance="fill">
                                 <mat-label>Location</mat-label>
-                                <input matInput  type="text" placeholder="Location" formControlName="adresse" required>
+                                <input matInput  type="text" placeholder="adresse" formControlName="adresse" required>
                               </mat-form-field>
                         </div>
                     </div>
@@ -65,6 +65,7 @@
                           <mat-form-field appearance="fill">
                               <mat-label>Password</mat-label>
                               <input matInput type="text" placeholder="Password"  formControlName="password" required>
+                              <mat-error  ></mat-error>
                             </mat-form-field>
                         </div>
                         <div class="col-md-6">
@@ -85,10 +86,11 @@
                       </div>
                       <div class="row">
                           <div class="col-md-6">
-                            <button  type="button" class="btn btn-secondary" matStepperNext >Next</button>
+                            <button  type="button" class="btn btn-secondary" matStepperNext  >Next</button>
                           </div>
                           
                       </div>
+                      <br>
                       <div class="row">
                             <h3>Alerady have an account? <a routerLink="/Login">Login</a></h3>
                       </div>
@@ -104,61 +106,27 @@
                     <div class="row">
                         <div class="col-md-6">
                           <mat-form-field appearance="fill">
-                              <mat-label>Name</mat-label>
-                              <input matInput type="text" placeholder="Name"  formControlName="association" required>
+                              <mat-label>Name association</mat-label>
+                              <input matInput type="text" placeholder=" Name association"  formControlName="association" required>
                             </mat-form-field>
                         </div>
                         <div class="col-md-6">
                             <mat-form-field appearance="fill">
-                                <mat-label>emailAssociation</mat-label>
-                                <input matInput  type="email" placeholder="emailAssociation" formControlName="emailAssociation" required>
+                                <mat-label>email Association</mat-label>
+                                <input matInput  type="email" placeholder="email Association " formControlName="emailAssociation" required>
                               </mat-form-field>
                         </div>
                     </div>
 
-                    <!-- <div class="row">
-                      <div class="col-md-6">
-                        <mat-form-field appearance="fill">
-                            <mat-label>Location</mat-label>
-                            <input matInput  type="text" placeholder="Location" formControlName="Location" required>
-                          </mat-form-field>
-                      </div>
-                      <div class="col-md-6">
-                        <mat-form-field  appearance="fill">
-                            <mat-label>Phone Number</mat-label>
-                            <input matInput type="number" placeholder="number" formControlName="phoneN" required >
-                          </mat-form-field>
-                      </div>
-                  </div> -->
-          
-                  <div class="row">
-                      <!-- <div class="col-md-6">
-                        <mat-form-field appearance="fill">
-                            <mat-label>date creation</mat-label>
-                            <input matInput  type="date" placeholder="date creation" formControlName="dateC" required>
-                          </mat-form-field>
-                      </div> -->
+                    <div class="row">
+                      
                       <div class="col-md-3">
-                          <div class="input-group mb-3">
-                              <input type="file" class="form-control" id="inputGroupFile01" formControlName="logo">
-                            </div>
-                      </div>
+                        <div class="input-group mb-3">
+                            <input type="file" class="form-control" id="inputGroupFile01" formControlName="logo">
+                          </div>
+                    </div>
                   </div>
-          
-                  <div class="row">
-                      <!-- <div class="col-md-6">
-                        <mat-form-field appearance="fill">
-                            <mat-label>Password</mat-label>
-                            <input matInput  type="password" placeholder="Password" formControlName="Password" required>
-                          </mat-form-field>
-                      </div>
-                      <div class="col-md-6">
-                        <mat-form-field appearance="fill">
-                            <mat-label>Confirm Password</mat-label>
-                            <input matInput type="password" placeholder="Confirm Password"  required>
-                          </mat-form-field>
-                      </div> -->
-                  </div>
+                        
                  <div class="row">
                   <mat-form-field appearance="fill">
                       <mat-label>Description</mat-label>

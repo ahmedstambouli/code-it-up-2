@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-inscriassociation',
   templateUrl: './inscriassociation.component.html',
@@ -12,42 +12,23 @@ export class InscriassociationComponent implements OnInit {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
 
-  constructor(private _formBuilder: FormBuilder) { }
+  constructor(private _formBuilder: FormBuilder,private http: HttpClient) { }
 
   ngOnInit(): void {
     this.secondFormGroup = this._formBuilder.group({
-      // email: ['', Validators.required, Validators.email],
-      // Name: ['', Validators.required],
-      // Location: ['', Validators.required],
-      // phonenumber: ['', Validators.required],
-      // dateC: ['', Validators.required],
-      // phoneN: ['', Validators.required],
-      // Logo: ['', Validators.required],
-      // Password: ['', Validators.required],
-      // Description: ['', Validators.required],
       lastName: ['', Validators.required],
       firstName: ['', Validators.required],
       phone: ['', Validators.required],
-      email: ['', Validators.required, Validators.email],
+      email: ['', Validators.required],
       password: ['', Validators.required],
       cin: ['', Validators.required],
       adresse: ['', Validators.required],
       type: ['founder', Validators.required],
       association: ['', Validators.required],
       description: ['', Validators.required],
-      emailAssociation: ['', Validators.required, Validators.email],
+      emailAssociation: ['', Validators.required],
       logo: ['', Validators.required]
     });
-
-    // this.firstFormGroup = this._formBuilder.group({
-    //   firstname: ['', Validators.required, Validators.email],
-    //   lastname: ['', Validators.required],
-    //   phonenumber: ['', Validators.required],
-    //   email: ['', Validators.required],
-    //   NCIN: ['', Validators.required],
-    //   Location: ['', Validators.required],
-    //   Password: ['', Validators.required],
-    // });
 
   }
 
@@ -67,7 +48,12 @@ export class InscriassociationComponent implements OnInit {
     formData.append('emailAssociation', this.secondFormGroup.value.emailAssociation)
     formData.append('logo', this.secondFormGroup.value.logo)
     
-    console.log(formData);
+    
+    console.log(this.secondFormGroup)
+    this.http.post('http://localhost:3000/api/user/register/',this.secondFormGroup.value).subscribe(res=>{
+      console.log(res)
+    })
+    
   }
 
 }
