@@ -22,6 +22,13 @@ import { ListeRequestComponent } from './liste-request/liste-request.component';
 import { ProfilAssociationComponent } from './profil-association/profil-association.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { ProfilAssComponent } from './profil-ass/profil-ass.component';
+import { UpdateEventComponent } from './update-event/update-event.component';
+import { UpdateArticalComponent } from './update-artical/update-artical.component';
+import { OwnerNavComponent } from './owner-nav/owner-nav.component';
+import { HomeOwnerComponent } from './home-owner/home-owner.component';
+import { SideOwnerComponent } from './side-owner/side-owner.component';
+import { OwnerArticalComponent } from './owner-artical/owner-artical.component';
+import { OwnerDhashComponent } from './owner-dhash/owner-dhash.component';
 
 
 const routes: Routes = [
@@ -38,8 +45,16 @@ const routes: Routes = [
 
 ]},
 
-
+{path: 'owner', component: HomeOwnerComponent,children:[
+  { path: 'updateEvent/:id', component: UpdateEventComponent },
+  { path: 'updateArtical/:id', component: UpdateArticalComponent },
+  { path: 'OwnerArtical', component: OwnerArticalComponent },
+  { path: 'OwnerDashowner', component: OwnerDhashComponent },
+]}
 ];
+
+//owner
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +67,14 @@ const routes: Routes = [
     ListeAssociationComponent,
     ListeRequestComponent,
     ProfilAssociationComponent,
-    ProfilAssComponent
+    ProfilAssComponent,
+    UpdateEventComponent,
+    UpdateArticalComponent,
+    OwnerNavComponent,
+    HomeOwnerComponent,
+    SideOwnerComponent,
+    OwnerArticalComponent,
+    OwnerDhashComponent
   ],
   imports: [
     BrowserModule,
