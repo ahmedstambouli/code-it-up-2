@@ -1,0 +1,66 @@
+<div [ngClass]="{'sidebar':true,'active':check}" style="z-index: 1000;">
+    <div class="log_content">
+        <div class="logo">
+            
+            <div class="logo_name"><img src="../assets/img/logo_light.png" ></div>
+        </div>
+        <i class='bx bx-menu-alt-left' id="btn" (click)="toggle()"  ></i>
+    </div>
+    <ul class="nav_list">
+        <li>
+            <a routerLink="/homeSuperadmin/statestique">
+              
+                <i class='bx bxs-home-alt-2'></i>
+                <span class="links_name" style="color: #0076FE;">Home</span>
+            </a>
+            <span class="tool">Home</span>
+        </li>
+
+        <!-- <li>
+            <a routerLink="/homeSuperadmin/statestiqueEntreprise">
+              
+                <i class='bx bx-list-ul' ></i>
+                <span class="links_name" style="color: #0076FE;">List Association</span>
+            </a>
+            <span class="tool">statestique_entreprise</span>
+        </li>
+        
+        <li>
+            <a routerLink="/homeSuperadmin/liste_admin">
+               
+                <i class='bx bx-list-ul' ></i>
+                <span class="links_name" style="color: #0076FE;">List Request</span>
+            </a>
+            <span class="tool">Admin</span>
+        </li> -->
+
+        <li>
+            <a routerLink="/homeSuperadmin/list-entreprise">
+                <i class='bx bxs-business' style="color: #0076FE"></i>
+                <span class="links_name" style="color: #0076FE;">Dashboared</span>
+            </a>
+            <span class="tool">Dashboared</span>
+        </li>
+
+
+       
+    </ul>
+    <div class="profile_content" >
+        <div class="profile">
+            <div class="profile_details">
+                <div class="name_job">
+                    <div class="name" style="color: #0076FE;">super admin </div>
+                    <div class="job" style="color: #0076FE;">super admin </div>
+                </div>
+            </div>
+            <a (click)="logout()">
+                <i class='bx bx-log-out-circle'id="log_out" style="color: #0076FE"></i>
+                
+               </a>
+        </div>
+    </div>
+</div>
+<div>
+
+   
+</div>

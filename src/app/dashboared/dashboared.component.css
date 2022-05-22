@@ -5,41 +5,44 @@
 
 .btn {
     color: white;
-    border-radius:5px;
+    border-radius: 5px;
     background: rgb(138, 80, 130);
     background: linear-gradient(90deg, rgba(138, 80, 130, 1) 0%, rgba(232, 183, 212, 1) 100%);
 }
 
-.c1{
-    background: rgb(255,187,118);
-    background: linear-gradient(90deg, rgba(255,187,118,1) 0%, rgba(214,127,167,1) 100%);
-    padding:15px;
-    border-radius:5px;
-    color:white;
+.c1 {
+    background: rgb(255, 187, 118);
+    background: linear-gradient(90deg, rgba(255, 187, 118, 1) 0%, rgba(214, 127, 167, 1) 100%);
+    padding: 15px;
+    border-radius: 5px;
+    color: white;
     margin: 5px;
 }
-.c2{
-    padding:15px;
-    border-radius:5px;
-    color:white;
-    background: rgb(187,221,253);
-background: linear-gradient(90deg, rgba(187,221,253,1) 0%, rgba(17,125,226,1) 100%);
-margin: 5px;
+
+.c2 {
+    padding: 15px;
+    border-radius: 5px;
+    color: white;
+    background: rgb(187, 221, 253);
+    background: linear-gradient(90deg, rgba(187, 221, 253, 1) 0%, rgba(17, 125, 226, 1) 100%);
+    margin: 5px;
 }
-.c3{
-    padding:15px;
-    border-radius:5px;
-    background: rgb(127,214,211);
-background: linear-gradient(90deg, rgba(127,214,211,1) 0%, rgba(70,238,154,1) 100%);    
-color:white;
-margin: 5px;
-    
+
+.c3 {
+    padding: 15px;
+    border-radius: 5px;
+    background: rgb(127, 214, 211);
+    background: linear-gradient(90deg, rgba(127, 214, 211, 1) 0%, rgba(70, 238, 154, 1) 100%);
+    color: white;
+    margin: 5px;
+
 }
-.ch1{
-    background-color:white;
+
+.ch1 {
+    background-color: white;
     -webkit-box-shadow: 0px 0px 5px #aeaeae;
     -moz-box-shadow: 0px 0px 5px #aeaeae;
     box-shadow: 0px 0px 5px #aeaeae;
-    padding:30px;
-    border-radius:5px;
+    padding: 30px;
+    border-radius: 5px;
 }
