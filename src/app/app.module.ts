@@ -27,12 +27,14 @@ import { ProfilAssComponent } from './profil-ass/profil-ass.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomefounderComponent } from './dashbordfounder/homefounder/homefounder.component';
 import { NavbarfounderComponent } from './dashbordfounder/navbarfounder/navbarfounder.component';
+import { InscriuserComponent } from './inscriuser/inscriuser.component';
 
 
 
 const routes: Routes = [
   { path: 'Login', component: LoginComponent },
   { path: 'Inscri', component: InscriassociationComponent },
+  {path:'InscriUser',component:InscriuserComponent},
 
 //super admin
 {path:'superadmin',component:HomesuperadminComponent,children:[
@@ -60,15 +62,13 @@ const routes: Routes = [
     HomesuperadminComponent,
     DashboaredComponent,
     NavComponent,
-<<<<<<< HEAD
     HomefounderComponent,
-    NavbarfounderComponent
-=======
+    NavbarfounderComponent,
     ListeAssociationComponent,
     ListeRequestComponent,
     ProfilAssociationComponent,
-    ProfilAssComponent
->>>>>>> d5603c8c07df6aa66d4b02d783babd215c13b343
+    ProfilAssComponent,
+    InscriuserComponent
   ],
   imports: [
     BrowserModule,

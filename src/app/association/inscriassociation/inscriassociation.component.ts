@@ -27,7 +27,7 @@ export class InscriassociationComponent implements OnInit {
       association: ['', Validators.required],
       description: ['', Validators.required],
       emailAssociation: ['', Validators.required],
-      logo: ['', Validators.required]
+      filename: ['', Validators.required]
     });
 
   }
@@ -46,7 +46,7 @@ export class InscriassociationComponent implements OnInit {
     formData.append('association', this.secondFormGroup.value.association)
     formData.append('description', this.secondFormGroup.value.description)
     formData.append('emailAssociation', this.secondFormGroup.value.emailAssociation)
-    formData.append('logo', this.secondFormGroup.value.logo)
+    formData.append('filename', this.secondFormGroup.value.filename)
     
     
     console.log(this.secondFormGroup)

@@ -3,7 +3,7 @@
 <div class="container">
     <div class="content"><br>
         <br>
-        <button class="btn"><i class='bx bxs-home-alt-2'></i></button> &nbsp; <b>Liste Request</b>
+         <b>Liste Request</b>
         <br>
         <br>
         <div class="box">
@@ -19,24 +19,25 @@
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
+                <tbody *ngFor="let aa of asso">
+                    
+                    <tr *ngIf="aa.status=='pending'">
 
-                        <td scope="col">Name</td>
-                        <td scope="col">Email</td>
+                        <td scope="col">{{aa.name}}</td>
+                        <td scope="col">{{aa.email}}</td>
                         <td scope="col">Location</td>
                         <td scope="col">Phone</td>
-                        <td scope="col">Status</td>
+                        <td scope="col">{{aa.status}}</td>
                         <td scope="col">
-                            <button class="btn btn1"><i class='bx bx-check' style="color:#037421;font-size: 25px;"></i></button>
-                            <button class="btn btn1"><i class='bx bx-block'style="color: rgb(46, 2, 12);font-size: 25px;"></i></button>
+                            <button class="btn btn1"><i class='bx bx-check' style="color:#037421;font-size: 25px;" (click)="changetype(aa._id)"> </i></button>
+                            <button class="btn btn1"><i class='bx bx-block'style="color: rgb(46, 2, 12);font-size: 25px;" (click)="changetype2(aa._id)"></i></button>
                             
                         </td>
                         <td scope="col">
                             <button class="btn btn-primary" style="background-color:#8BBDFF">View</button>
                         </td>
                     </tr>
-
+                
                 </tbody>
             </table>
         </div>

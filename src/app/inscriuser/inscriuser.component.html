@@ -1,0 +1,73 @@
+<div class="container">
+<div class="row">
+    <form [formGroup]="form">
+    <div class="col md-6">
+        <img src="../../assets/image/groupe-personnes-se-soutenant-mutuellement-concept-travail-equipe-amitie_146671-18428.jpg" style="width:550px ;height: 620px; margin-left: -25%;" alt="">
+    </div>
+    <div class="col-md-6" style="margin-top:10% ;">
+        <div class="row" >
+            <h1 class="d-flex justify-content-center" style="font-size:50px;">
+                Sign Up 
+            </h1>
+        </div>
+    <div class="row" style="margin-top:10% ;">
+        <div class="col-md-6">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="First Name" formControlName="firstName">
+                <label for="floatingInput">First Name</label>
+              </div>
+        </div>
+        <div class="col-md-6">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="floatingPassword" placeholder="Last Name" formControlName="lastName">
+                <label for="floatingPassword">Last Name</label>
+              </div>
+        </div>
+    
+    </div> 
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="Email" formControlName="email">
+                <label for="floatingInput">Email</label>
+              </div>
+        </div>
+        <div class="col-md-6">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="floatingPassword" placeholder="adresse" formControlName="adresse">
+                <label for="floatingPassword">Adresse</label>
+              </div>
+        </div>
+    
+    </div>  
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-floating mb-3">
+                <input type="number" class="form-control" id="floatingInput" placeholder="phone number" formControlName="phone">
+                <label for="floatingInput">phone number</label>
+              </div>
+        </div>
+        <div class="col-md-6">
+              <div class="form-floating">
+                <input type="number" class="form-control" id="floatingPassword" placeholder="NCIN" formControlName="cin">
+                <label for="floatingPassword">NCIN</label>
+              </div>
+        </div>
+    
+    </div>  
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="floatingInput" placeholder="password">
+                <label for="floatingInput">password</label>
+              </div>
+        </div>
+        
+    
+    </div> 
+    <h3>Alerady have an account? <a routerLink="/Login">Login</a></h3>
+        <button class="btn btn-primary" (click)="adduser()">SIgn Up</button>
+</div>
+</form>
+</div>
+</div>
