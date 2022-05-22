@@ -23,11 +23,21 @@ import { ListeRequestComponent } from './liste-request/liste-request.component';
 import { ProfilAssociationComponent } from './profil-association/profil-association.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { ProfilAssComponent } from './profil-ass/profil-ass.component';
+import { UpdateEventComponent } from './update-event/update-event.component';
+import { UpdateArticalComponent } from './update-artical/update-artical.component';
+import { OwnerNavComponent } from './owner-nav/owner-nav.component';
+import { HomeOwnerComponent } from './home-owner/home-owner.component';
+import { SideOwnerComponent } from './side-owner/side-owner.component';
+import { OwnerArticalComponent } from './owner-artical/owner-artical.component';
+import { OwnerDhashComponent } from './owner-dhash/owner-dhash.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { HomefounderComponent } from './dashbordfounder/homefounder/homefounder.component';
 import { NavbarfounderComponent } from './dashbordfounder/navbarfounder/navbarfounder.component';
 import { InscriuserComponent } from './inscriuser/inscriuser.component';
+import { AcceuilComponent } from './acceuil/acceuil.component';
+import { UserAssociationProfilComponent } from './user-association-profil/user-association-profil.component';
+import { EventsComponent } from './events/events.component';
 
 
 
@@ -49,10 +59,24 @@ const routes: Routes = [
 //founder
 {path:'homefoundr',component:HomefounderComponent,children:[
   
-]}
+]},
 
 
+{path: 'owner', component: HomeOwnerComponent,children:[
+  { path: 'updateEvent/:id', component: UpdateEventComponent },
+  { path: 'updateArtical/:id', component: UpdateArticalComponent },
+  { path: 'OwnerArtical', component: OwnerArticalComponent },
+  { path: 'OwnerDashowner', component: OwnerDhashComponent },
+]},
+{ path: 'home', component: AcceuilComponent },
+{ path: 'event/:id', component: EventsComponent },
+{ path: 'ProfilAssComponent/:id', component: UserAssociationProfilComponent },
 ];
+
+
+
+//owner
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,7 +92,17 @@ const routes: Routes = [
     ListeRequestComponent,
     ProfilAssociationComponent,
     ProfilAssComponent,
-    InscriuserComponent
+    InscriuserComponent,
+    UpdateEventComponent,
+    UpdateArticalComponent,
+    OwnerNavComponent,
+    HomeOwnerComponent,
+    SideOwnerComponent,
+    OwnerArticalComponent,
+    OwnerDhashComponent,
+    AcceuilComponent,
+    UserAssociationProfilComponent,
+    EventsComponent
   ],
   imports: [
     BrowserModule,
